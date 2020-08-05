@@ -7,3 +7,4 @@ GitHub repo for The Atlas of Housing Production.
 ## Credits
 
 - This project is based on Dan Urbanowicz's [eleventy-netlify-boilerplate](https://github.com/danurbanowicz/eleventy-netlify-boilerplate) starter.
+- I added Tailwind following Greg Wolanski's [An Eleventy Starter with Tailwind CSS and Alpine.js](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/) on CSS-TRICKS.
