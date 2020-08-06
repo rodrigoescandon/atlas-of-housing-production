@@ -1,7 +1,22 @@
 [
-  "Tosepan",
-  "Antorcha Campesina",
-  "Banamex",
-  "Casas GEO",
-  "INFONAVIT"
+  {
+    "name": "Tosepan",
+    "color": "green-500"
+  },
+  {
+    "name": "Antorcha Campesina",
+    "color": "red-500"
+  },
+  {
+    "name": "Banamex",
+    "color": "orange-500"
+  },
+  {
+    "name": "Casas GEO",
+    "color": "blue-500"
+  },
+  {
+    "name": "INFONAVIT",
+    "color": "pink-500"
+  }
 ]

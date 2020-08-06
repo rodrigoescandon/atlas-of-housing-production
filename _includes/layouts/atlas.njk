@@ -7,10 +7,10 @@ permalink: /atlas/index.html
 
 {{ layoutContent | safe }}
 
-<div class="md:flex flex-wrap mb-4 hidden">
+<div class="md:flex flex-wrap mb-4 -mx-2 hidden">
   {# Generate column titles by protocols #}
   {% for protocol in protocols %}
-    <div class="w-full md:w-1/5">
+    <div class="w-full md:w-1/5 px-2">
       {{ protocol }}
     </div>
   {% endfor %}
@@ -18,18 +18,20 @@ permalink: /atlas/index.html
 
 {% for institution in institutions %}
   <div>
-    <h2>{{ institution }}</h2>
+    <h2 class="text-{{- institution.color }} mb-2">{{ institution.name }}</h2>
     <div class="flex flex-wrap mb-4 -mx-2">
       {% for protocol in protocols %}
         <div class="w-full md:w-1/5 px-2">
-          <div class="md:hidden">
+          <h3 class="md:hidden mb-1">
             {{ protocol }}
-          </div>
-          <div class="bg-gray-400">
+          </h3>
+          <div class="border-4 border-{{- institution.color }} mb-2 shadow-md">
             {% for thisProtocol in collections.protocol %}
-              {% if thisProtocol.data.protocol == protocol and thisProtocol.data.institution == institution %}
-                <video controls poster="https://via.placeholder.com/320x180/ededed/000000?Text=Poster">
-                  <source src="{{ thisProtocol.data.video }}" type="video/mp4">
+              {% if thisProtocol.data.protocol == protocol and thisProtocol.data.institution == institution.name %}
+                <video controls poster="{{ thisProtocol.data.image }}">
+                  {% if thisProtocol.data.video %}
+                    <source src="{{ thisProtocol.data.video }}" type="video/mp4">
+                  {% endif %}
                   Your browser does not support the video tag.
               </video>
               {% endif %}
