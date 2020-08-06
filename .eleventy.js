@@ -98,7 +98,12 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
-  /* Markdown Plugins */
+  // Alpine.js config
+  eleventyConfig.addPassthroughCopy({
+    "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
+  });
+
+  // Markdown Plugins
   let markdownIt = require("markdown-it");
   let markdownItAnchor = require("markdown-it-anchor");
   let options = {
