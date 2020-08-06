@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+section: atlas
+permalink: /atlas/index.html
+---
+{# <h1>{{ title }}</h1> #}
+
+{{ layoutContent | safe }}
+
+<div class="md:flex flex-wrap mb-4 hidden">
+  {# Generate column titles by protocols #}
+  {% for protocol in protocols %}
+    <div class="w-full md:w-1/5">
+      {{ protocol }}
+    </div>
+  {% endfor %}
+</div>
+
+{% for institution in institutions %}
+  <div>
+    <h2>{{ institution }}</h2>
+    <div class="flex flex-wrap mb-4 -mx-2">
+      {% for protocol in protocols %}
+        <div class="w-full md:w-1/5 px-2">
+          <div class="md:hidden">
+            {{ protocol }}
+          </div>
+          <div class="bg-gray-400">
+            {% for thisProtocol in collections.protocol %}
+              {% if thisProtocol.data.protocol == protocol and thisProtocol.data.institution == institution %}
+                <video controls poster="https://via.placeholder.com/320x180/ededed/000000?Text=Poster">
+                  <source src="{{ thisProtocol.data.video }}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
+
+
+{# {% set postslist = collections.protocol %} #}
+
