@@ -5,14 +5,15 @@
 
   <body class="leading-none">
     <div class="grid p-6 h-screen grid-rows-layout">
-      <header>
-        <em>
-          <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-        </em>
+      <header class="mb-3">
+        <div class="mb-3">
+          The <a href="{{ '/' | url }}" class="underline {% if page.url == "/" %} bg-yellow-300 py-1 {% endif %}">{{ metadata.title }}</a>
+          is <a href="/inventory/" class="underline {% if page.url == "/inventory/" %} bg-yellow-300 py-1 {% endif %}">an inventory of protocols</a> for producing housing in Mexico.
+        </div>
         {% include "components/nav.njk" %}
       </header>
 
-      <main class="mt-6">
+      <main>
         {{ layoutContent | safe }}
       </main>
 

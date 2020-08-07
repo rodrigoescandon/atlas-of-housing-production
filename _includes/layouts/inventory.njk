@@ -22,27 +22,25 @@ permalink: /atlas/index.html
     <div class="flex flex-wrap mb-4 -mx-2">
       {% for protocol in protocols %}
         <div class="w-full md:w-1/5 px-2">
-          <h3 class="md:hidden mb-1">
-            {{ protocol }}
-          </h3>
-          <div class="border-4 border-{{- institution.color }} mb-2 shadow-md">
-            {% for thisProtocol in collections.protocol %}
-              {% if thisProtocol.data.protocol == protocol and thisProtocol.data.institution == institution.name %}
+          {% for thisProtocol in collections.protocol %}
+            {% if thisProtocol.data.protocol == protocol and thisProtocol.data.institution == institution.name %}
+              <h3 class="md:hidden mb-1">
+                {{ protocol }}
+              </h3>
+              <div class="border-4 border-{{- institution.color }} mb-2 shadow-md">
                 <video controls poster="{{ thisProtocol.data.image }}">
                   {% if thisProtocol.data.video %}
                     <source src="{{ thisProtocol.data.video }}" type="video/mp4">
                   {% endif %}
                   Your browser does not support the video tag.
               </video>
-              {% endif %}
-            {% endfor %}
-          </div>
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
       {% endfor %}
     </div>
   </div>
 {% endfor %}
 
-
 {# {% set postslist = collections.protocol %} #}
-
