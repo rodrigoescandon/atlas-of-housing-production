@@ -2,5 +2,5 @@
 institution: INFONAVIT
 protocol: Financing
 video: 
-image: https://source.unsplash.com/random/320x180
+image: /static/img/images-017.png
 ---

@@ -2,5 +2,5 @@
 institution: Tosepan
 protocol: Managing Construction
 video: 
-image: https://source.unsplash.com/random/320x180
+image: /static/img/images-003.png
 ---

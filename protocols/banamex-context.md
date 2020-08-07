@@ -2,5 +2,5 @@
 institution: Banamex
 protocol: Context
 video: 
-image: https://source.unsplash.com/random/320x180
+image: /static/img/images-012.png
 ---

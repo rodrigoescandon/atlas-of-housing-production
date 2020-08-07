@@ -2,5 +2,5 @@
 institution: Antorcha Campesina
 protocol: Context
 video: 
-image: https://source.unsplash.com/random/320x180
+image: /static/img/images-006.png
 ---
