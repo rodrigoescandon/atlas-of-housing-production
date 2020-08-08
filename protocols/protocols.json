@@ -1,5 +1,6 @@
 {
-  "permalink": false,
+  "layout": "layouts/protocol.njk",
+  "permalink": "{{ page.filePathStem }}/index.html",
   "tags": [
     "protocol"
   ]
