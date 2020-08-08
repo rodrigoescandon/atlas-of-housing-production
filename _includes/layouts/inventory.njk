@@ -18,8 +18,8 @@ permalink: /atlas/index.html
 
 {% for institution in institutions %}
   <div x-data="{ isOpen: false }" x-init="isOpen = window.outerWidth < 640 ? false : true" x-on:resize.window="isOpen = window.outerWidth < 640 ? false : true">
-    <h2 class="text-{{- institution.color }} mb-2" x-on:click="isOpen = !isOpen">{{ institution.name }} </h2>
-    <div class="flex-wrap mb-4 -mx-2 flex" x-show.transition.duration.200ms.origin.top.left.scale.20="isOpen">
+    <h2 class="text-{{- institution.color }} mb-2 cursor-pointer sm:cursor-auto" x-on:click="window.outerWidth < 640 ? isOpen = !isOpen : '' ">{{ institution.name }} </h2>
+    <div class="flex-wrap mb-4 -mx-2 flex" x-show.transition.duration.200ms.origin.top.left.opacity.scale.50="isOpen">
         {% for protocol in protocols %}
           <div class="w-full sm:w-1/5 px-2">
             {% for thisProtocol in collections.protocol %}
