@@ -17,9 +17,9 @@ permalink: /atlas/index.html
 </div>
 
 {% for institution in institutions %}
-  <div>
-    <h2 class="text-{{- institution.color }} mb-2">{{ institution.name }}</h2>
-    <div class="flex flex-wrap mb-4 -mx-2">
+  <div x-data="{ isOpen: false }">
+    <h2 class="text-{{- institution.color }} mb-2" x-on:click=" isOpen = !isOpen">{{ institution.name }} </h2>
+    <div class="flex flex-wrap mb-4 -mx-2 sm:flex" :class="{ 'hidden': !isOpen }">
       {% for protocol in protocols %}
         <div class="w-full sm:w-1/5 px-2">
           {% for thisProtocol in collections.protocol %}
