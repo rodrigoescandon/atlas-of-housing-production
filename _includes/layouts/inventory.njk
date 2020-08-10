@@ -93,13 +93,22 @@ section: inventory
           x-on:open-modal.window="isTabOpen = $event.detail.setModal === '{{ thisProtocol.data.institution | slug }}-{{ thisProtocol.data.protocol | slug }}'"
           x-show="isTabOpen"
         >
-          {% if thisProtocol.data.video %}
-            <video class="video w-full" controls poster="{{ thisProtocol.data.image }}">
-              <source src="{{ thisProtocol.data.video }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          {% endif %}
-          {{ thisProtocol.data.layoutContent | safe }}
+          <h2>
+          	{{ thisProtocol.data.institution }}: {{ thisProtocol.data.protocol }}
+          </h2>
+          <div class="mt-2">
+            {% if thisProtocol.data.video or thisProtocol.data.layoutContent %}
+              {% if thisProtocol.data.video %}
+                <video class="video w-full" controls poster="{{ thisProtocol.data.image }}">
+                  <source src="{{ thisProtocol.data.video }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              {% endif %}
+              {{ thisProtocol.data.layoutContent | safe }}
+            {% else %}
+              Soon
+            {% endif %}
+            </div>
         </div>
       {% endfor %}
     </div>

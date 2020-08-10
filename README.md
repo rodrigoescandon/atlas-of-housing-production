@@ -4,6 +4,14 @@
 
 GitHub repo for The Atlas of Housing Production.
 
+## To-do
+
+- Content
+  - Add information from thesis.
+  - Make section about self-building manuals.
+- Programming
+  - Sparate on click directives in modal.
+
 ## Credits
 
 - This project is based on Dan Urbanowicz's [eleventy-netlify-boilerplate](https://github.com/danurbanowicz/eleventy-netlify-boilerplate) starter.
