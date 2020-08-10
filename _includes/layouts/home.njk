@@ -4,19 +4,3 @@ section: home
 ---
 
 {{ layoutContent | safe }}
-
-<div x-data="{}" x-subscribe>
-    <div x-show="$store.modal.open === 'login'">
-    <p>
-      This "login" modal isn't built with a11y in mind, don't actually use it
-    </p>
-    </div>
-</div>
-
-<div x-data="{}" x-subscribe>
-    <div x-show="$store.modal.open === 'register'">
-    <p>
-      This "register" modal isn't built with a11y in mind, don't actually use it
-    </p>
-    </div>
-</div>
