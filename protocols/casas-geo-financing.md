@@ -1,6 +1,7 @@
 ---
-# institution: Casas GEO
-# protocol: Financing
+permalink: 0
+institution: Casas GEO
+protocol: Financing
 video: 
 image: https://source.unsplash.com/random/320x180
 ---
