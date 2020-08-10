@@ -42,7 +42,7 @@ section: inventory
   </div>
 {% endfor %}
 
-<div class="fixed inset-0 p-6 flex items-center justify-center"
+<div class="fixed inset-0 p-6 sm:p-12 flex items-center justify-center"
   x-data="{ isModalOpen: false }"
   x-show="isModalOpen"
   x-on:open-modal.window="isModalOpen = $event.detail.isModalOpen"

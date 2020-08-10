@@ -100,12 +100,6 @@ module.exports = function (eleventyConfig) {
 
   // Alpine.js config
   eleventyConfig.addPassthroughCopy({
-    "./node_modules/@ryangjchandler/spruce/dist/spruce.umd.js": "./js/spruce.umd.js",
-  });
-  eleventyConfig.addPassthroughCopy({
-    "./node_modules/@ryangjchandler/spruce/dist/spruce.umd.js.map": "./js/spruce.umd.js.map",
-  });
-  eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
   });
 
