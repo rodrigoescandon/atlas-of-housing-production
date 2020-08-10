@@ -1,6 +1,6 @@
 ---
 institution: Antorcha Campesina
-protocol: Context
+protocol: About the institution
 video: 
 image: /static/img/images-006.png
 ---

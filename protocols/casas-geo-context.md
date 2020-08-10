@@ -1,6 +1,6 @@
 ---
 institution: Casas GEO
-protocol: Context
+protocol: About the institution
 video: 
 image: /static/img/images-020.png
 ---

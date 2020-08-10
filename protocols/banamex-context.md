@@ -1,6 +1,6 @@
 ---
 institution: Banamex
-protocol: Context
+protocol: About the institution
 video: 
 image: /static/img/images-012.png
 ---

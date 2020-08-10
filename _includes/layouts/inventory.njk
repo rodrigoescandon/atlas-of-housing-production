@@ -6,7 +6,7 @@ section: inventory
 
 {{ layoutContent | safe }}
 
-<div class="sm:flex flex-wrap mb-4 -mx-2 hidden">
+<div class="sm:flex flex-wrap mb-4 -mx-2 hidden items-end">
   {# Generate column titles by protocols #}
   {% for protocol in protocols %}
     <div class="w-full sm:w-1/5 px-2">
@@ -93,7 +93,7 @@ section: inventory
           x-on:open-modal.window="isTabOpen = $event.detail.setModal === '{{ thisProtocol.data.institution | slug }}-{{ thisProtocol.data.protocol | slug }}'"
           x-show="isTabOpen"
         >
-          <h2>
+          <h2 class="font-semibold">
           	{{ thisProtocol.data.institution }}: {{ thisProtocol.data.protocol }}
           </h2>
           <div class="mt-2">
@@ -106,7 +106,7 @@ section: inventory
               {% endif %}
               {{ thisProtocol.data.layoutContent | safe }}
             {% else %}
-              Soon
+              Coming soon.
             {% endif %}
             </div>
         </div>
