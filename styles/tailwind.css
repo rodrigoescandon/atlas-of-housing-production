@@ -4,6 +4,10 @@
   padding-bottom: 56.25%
 }
 
+.markdown-frame p {
+  @apply mt-4;
+}
+
 @tailwind components;
 
 @tailwind utilities;
